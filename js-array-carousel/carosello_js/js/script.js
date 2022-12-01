@@ -39,17 +39,30 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
 next.addEventListener('click', function(){
-    //verifico l'elemento attivo (itemActive)
-    //incremento il suo valore di 1
-    //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
-    //stessa cosa per i cerchi
+    items[itemActive].classList.remove(`active`);
+    circles[itemActive].classList.remove(`active`);
+
+    items[++itemActive].classList.add(`active`);
+    circles[itemActive].classList.add(`active`);
 });
 
 prev.addEventListener('click', function(){
-    //verifico l'elemento attivo (itemActive)
-    //decremento il suo valore di 1
-    //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
-    //stessa cosa per i cerchi
+    items[itemActive].classList.remove(`active`);
+    circles[itemActive].classList.remove(`active`);
+    
+    items[--itemActive].classList.add(`active`);
+    circles[itemActive].classList.add(`active`);
 })
 
+//verifico l'elemento attivo (itemActive)
 
+//incremento il suo valore di 1
+
+
+
+//aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
+//stessa cosa per i cerchi
+
+//verifico l'elemento attivo (itemActive)
+//decremento il suo valore di 1
+//aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente//stessa cosa per i cerchi
